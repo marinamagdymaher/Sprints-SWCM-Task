@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Data</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(45, 65, 56);
+    }
+    .container {
+      width: 100%;
+      height: 100%;
+      background-color: rgb(67, 98, 84);
+      border: 2px solid white;
+      position: relative;
+    }
+    header {
+      width: 10%;
+      height: 3%;
+      font-weight: bold;
+      position: absolute;
+      top: -10px;
+      left: 15px;
+      background-color: rgb(110, 161, 138);
+    }
+    img {
+      width: 5%;
+      position: absolute;
+      top: -30px;
+      left: 15px;
+    }
+
+    .nameInfo {
+      /* width: 100%; */
+      height: 20%;
+      border: 1px solid white;
+      background-color: rgb(90, 132, 113);
+      position: relative;
+      margin: 50px 10px;
+      padding: 10px;
+    }
+    .nameInfo input {
+      margin: 5px;
+    }
+    .another-Info,
+    .gender,
+    .degreeInfo {
+      padding: 5px;
+      margin: 0 5px;
+    }
+    .another-Info input {
+      margin: 5px;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: rgb(26, 77, 54);
+      border-radius: 10px;
+    }
+    .datalist-holder {
+      padding: 10px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <header>Personal Data</header>
+
+      <div class="nameInfo">
+        <img src="./2.png" alt="Marina Magdy" /><br /><br />
+        <label for="fname">First Name&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="ex.Mohamed"
+        /><br />
+        <label for="lname">Second Name:</label>
+        <input
+          type="text"
+          id="lname"
+          name="lname"
+          placeholder="ex.Hesham"
+        /><br />
+      </div>
+      <div class="another-Info">
+        <label for="phone">Your Phone:&nbsp;&nbsp;</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone" placeholder="Enter your phone"
+          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+        /><br />
+        <label for="email"
+          >Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+        >
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+        /><br />
+
+        <label for="password">Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+        /><br />
+        <label for="password">re-Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password again"
+        /><br /><br />
+      </div>
+      <div class="gender">
+        <input type="radio" id="Male" name="gender" value="Male" />
+        <label for="Male">Male</label><br />
+        <input type="radio" id="Female" name="gender" value="Female" />
+        <label for="Female">Female</label><br />
+      </div>
+      <br />
+      <div class="degreeInfo">
+        <input
+          type="checkbox"
+          id="Information Technology"
+          name="Information Technology"
+          value="Car"
+        /><label for="Student"> Student</label><br />
+
+        <input
+          type="checkbox"
+          id="Computer Architecture"
+          name="Computer Architecture"
+          value="Boat"
+        />
+        <label for="Graduated"> Graduated</label>
+      </div>
+      <br />
+      <div class="datalist-holder">
+        <label for="Universities">Universities:</label>
+        <input placeholder="Please Select a university" list="Universities" name="Universities" class="datalist-input" ></option>
+        <datalist id="Universities">
+          <option value="Zewail City of Science, Technology and Innovation" ></option>
+          <option value="King Salman International University" ></option>
+          <option value="Tanta University" selected></option>
+          <option value="Zagazig University" ></option>
+          <option value="Sohag University" ></option>
+          <option value="AUC"></option>
+        </datalist>
+      </div>
+      <button>Submit</button>
+    </div>
+  </body>
+</html>
