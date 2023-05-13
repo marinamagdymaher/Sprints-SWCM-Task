@@ -18,24 +18,29 @@
       position: relative;
     }
     header {
-      width: 10%;
-      height: 3%;
+      /* width: 10%; */
+      /* height: 3%; */
       font-weight: bold;
       position: absolute;
       top: -10px;
       left: 15px;
       background-color: rgb(110, 161, 138);
     }
-    img {
+    .as-img {
       width: 5%;
+      text-align: center;
+      /* padding: 10px; */
+      /* height: 10px; */
+      background-color: rgb(109, 158, 136);
+      border: 1px solid black;
+      /* margin-bottom: 4px; */
       position: absolute;
       top: -30px;
       left: 15px;
     }
-
     .nameInfo {
       /* width: 100%; */
-      height: 20%;
+      height: 30%;
       border: 1px solid white;
       background-color: rgb(90, 132, 113);
       position: relative;
@@ -69,8 +74,9 @@
       <header>Personal Data</header>
 
       <div class="nameInfo">
-        <img src="./2.png" alt="Marina Magdy" /><br /><br />
-        <label for="fname">First Name&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+        <div class="as-img">Your Name</div>
+        <!-- <img src="./2.png" alt="Marina Magdy" /><br /><br /> -->
+        <label for="fname">First Name&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</label>
         <input
           type="text"
           id="fname"
@@ -86,7 +92,7 @@
         /><br />
       </div>
       <div class="another-Info">
-        <label for="phone">Your Phone:&nbsp;&nbsp;</label>
+        <label for="phone">Your Phone&nbsp;&nbsp;:&nbsp;</label>
         <input
           type="tel"
           id="phone"
@@ -94,7 +100,7 @@
           pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
         /><br />
         <label for="email"
-          >Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+          >Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</label
         >
         <input
           type="text"
@@ -103,14 +109,14 @@
           placeholder="Enter your email"
         /><br />
 
-        <label for="password">Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <label for="password">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</label>
         <input
           type="password"
           id="password"
           name="password"
           placeholder="Enter your password"
         /><br />
-        <label for="password">re-Password:</label>
+        <label for="password">re-Password&nbsp;:</label>
         <input
           type="password"
           id="password"
