@@ -1,0 +1,43 @@
+.nav-container {
+  background-color: black;
+  color: white;
+  /* padding: 20px; */
+  display: flex;
+  justify-content: space-around;
+}
+.nav-right,
+.nav-left {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.nav-container .nav-right {
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+.nav-container .nav-left {
+  justify-content: flex-end;
+}
+nav .shop,
+nav .pages,
+nav .blog {
+  background-color: black;
+  color: white;
+  border: none;
+}
+.categories {
+  background-color: yellow;
+  color: black;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.shape {
+  color: yellow;
+}
+
