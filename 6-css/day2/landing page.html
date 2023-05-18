@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- <link href="https://fonts.cdnfonts.com/css/archivo" rel="stylesheet" /> -->
+    <script
+      src="https://kit.fontawesome.com/fe34ab1e83.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1><i class="fa-solid fa-music"></i> Top 10 Songs</h1>
+      <p>
+        LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING
+        INDUSTRY. LOREM IPSUM HAS BEEN THE INDUSTRY'S STANDARD DUMMY TEXT EVER
+        SINCE THE 1500S, WHEN AN UNKNOWN PRINTER TOOK A GALLEY OF TYPE AND
+        SCRAMBLED IT TO MAKE A TYPE SPECIMEN BOOK. IT HAS SURVIVED NOT ONLY FIVE
+      </p>
+      <button id="btn" onclick="songList()">Hide!</button>
+      <div id="song-list" class="song-list">
+        <div><span>#1</span> Time to Pretend</div>
+        <div><span>#2</span> O-o-oh Child</div>
+        <div><span>#3</span> Wish You Were Here</div>
+        <div><span>#4</span> Heroes</div>
+        <div><span>#5</span> I Put a Spell on You</div>
+        <div><span>#6</span> Call Me</div>
+        <div><span>#7</span> Paper Planes</div>
+        <div><span>#8</span> Jolene</div>
+        <div><span>#9</span> You Don't Own Me</div>
+        <div><span>#10</span> Fast Car</div>
+        <div><span>#11</span> Run the World (Girls)</div>
+        <div><span>#12</span> Superstition</div>
+      </div>
+    </div>
+    <script>
+      const btn = document.getElementById("btn");
+      var a;
+      a = document.getElementById("song-list");
+      // a = document.getElementsByClassName("song-list")[0];
+      a.style.display = "grid";
+      function songList() {
+        if (a.style.display == "grid") {
+          a.style.display = "none";
+          btn.innerHTML =
+            '<span>Show me!</span>';
+        } else {
+          a.style.display = "grid";
+          btn.textContent = "Hide!";
+        }
+      }
+    </script>
+  </body>
+</html>
