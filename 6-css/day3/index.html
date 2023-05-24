@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multi-Shop</title>
+
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./css/main-nav.css" />
+    <link rel="stylesheet" href="./media.css" />
     <script
       src="https://kit.fontawesome.com/fe34ab1e83.js"
       crossorigin="anonymous"
@@ -15,79 +16,117 @@
   <body>
     <div class="main-container">
       <header>
-        <nav>
-          <div class="top-nav">
-            <ul class="links">
-              <li><a href="/about">About</a></li>
-              <li><a href="/contact">Contact</a></li>
-              <li><a href="/help">Help</a></li>
-              <li><a href="/faqs">FAQs</a></li>
-            </ul>
-            <div class="right-menu">
-              <div class="menu">
-                <label
-                  >My Account
-                  <ul>
-                    <li><a href="">Sign in</a></li>
-                    <li><a href="">Sign out</a></li>
-                  </ul>
-                </label>
-              </div>
+        <div class="top-nav">
+          <ul class="links">
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/help">Help</a></li>
+            <li><a href="/faqs">FAQs</a></li>
+          </ul>
+          <ul class="nav-leftMedia-query">
+            <li><i class="fa-solid fa-heart shape"></i></li>
+            <span>0</span>
+            <li><i class="fa-sharp fa-solid fa-bag-shopping shape"></i></li>
+            <span>0</span>
+          </ul>
+          <div class="right-menu">
+            <label class="menu">
+              <span>My Account</span>
+              <i class="fa-solid fa-caret-down"></i>
+              <ul>
+                <li><a href="">Sign in</a></li>
+                <li><a href="">Sign out</a></li>
+              </ul>
+            </label>
+            <label class="menu">
+              <span>USD</span>
+              <i class="fa-solid fa-caret-down"></i>
+              <ul>
+                <li><a href="">EGP</a></li>
+                <li><a href="">SAR</a></li>
+              </ul>
+            </label>
+            <label class="menu">
+              <span>EN</span>
+              <i class="fa-solid fa-caret-down"></i>
+              <ul >
+                <li><a href="">FR</a></li>
+                <li><a href="">AR</a></li>
+                <li><a href="">RU</a></li>
+              </ul>
+            </label>
 
-              <div class="menu">
-                <label
-                  >USD
-                  <ul>
-                    <li><a href="">EGP</a></li>
-                    <li><a href="">SAR</a></li>
-                  </ul>
-                </label>
+          </div>
+        </div>
+        <!-- Logo Section-->
+        <div class="logo-section">
+          <div class="logo">
+            <img src="./images/multi-shop.PNG" alt="multi-shop" />
+          </div>
+          <div class="search-bar">
+            <input type="search" placeholder="Search..." />
+            <span><i class="fa-solid fa-magnifying-glass"></i> </span>
+          </div>
+          <div class="customer-service">
+            <p>Customer Service</p>
+            <h5>+012 345 6789</h5>
+          </div>
+        </div>
+        <!-- End Logo Section-->
+        <!-- Start Main Navbar -->
+        <nav class="main-nav">
+          <ul class="main-nav-right">
+            <li class="categories">
+              <i class="fa-solid fa-list"></i>&nbsp; Categories &nbsp;<i
+                class="fa-solid fa-chevron-down"
+              ></i>
+              <div class="dropdown-content">
+                <a href="#">Dresses</a>
+                <a href="#">Skirts</a>
+                <a href="#">Jeans</a>
               </div>
-              <div class="counters">counters</div>
-            </div>
-          </div>
-          <!-- Logo Section-->
-          <div class="logo-section">
-            <div class="logo">
-              <img src="./images/multi-shop.PNG" alt="multi-shop" />
-            </div>
-            <div class="search-bar">
-              <input type="search" placeholder="Search..." />
-              <span><i class="fa-solid fa-magnifying-glass"></i> </span>
-            </div>
-            <div class="customer-service">
-              <p>Customer Service</p>
-              <h5>+012 345 6789</h5>
-            </div>
-          </div>
-          <!-- End Logo Section-->
-          <!-- Start Main Navbar -->
-          <div class="main-nav">
-            <ul class="main-nav-right">
-              <li class="categories">
-                <i class="fa-solid fa-list"></i>&nbsp; Categories &nbsp;<i
-                  class="fa-solid fa-chevron-down"
-                ></i>
-              </li>
-              <li>Home</li>
-              <li>Shop</li>
-              <li>Shop Detail</li>
-              <li class="page">
-                Pages &nbsp;<i class="fa-solid fa-chevron-down"></i>
-              </li>
-              <li>Contant Us</li>
-            </ul>
-            <ul class="main-nav-left">
-              <li><i class="fa-solid fa-heart shape"></i></li>
-              <span>0</span>
-              <li><i class="fa-sharp fa-solid fa-bag-shopping shape"></i></li>
-              <span>0</span>
-            </ul>
-          </div>
-          <!-- End Main Navbar -->
+            </li>
+            <li>Home</li>
+            <li>Shop</li>
+            <li>Shop Detail</li>
+            <li class="page">
+              Pages &nbsp;<i class="fa-solid fa-chevron-down"></i>
+            </li>
+            <li>Contant Us</li>
+          </ul>
+          <ul class="main-nav-left">
+            <li><i class="fa-solid fa-heart shape"></i></li>
+            <span>0</span>
+            <li><i class="fa-sharp fa-solid fa-bag-shopping shape"></i></li>
+            <span>0</span>
+          </ul>
         </nav>
+        <!-- End Main Navbar -->
       </header>
       <main>
+        <div class="product-section">
+          <div class="sections">
+            <img src="./images/carousel-1.jpg" alt="carousel-1" />
+          </div>
+          <div class="discount">
+            <div class="offer-container">
+              <img src="images/offer-1.jpg" alt="offer-1" />
+              <div class="offer-text">
+                <p>SAVE 20%</p>
+                <h4>Special Offer</h4>
+                <button>Shop Now</button>
+              </div>
+            </div>
+            <div class="offer-container">
+              <img src="images/offer-2.jpg" alt="offer-2" />
+              <div class="offer-text">
+                <p>SAVE 20%</p>
+                <h4>Special Offer</h4>
+                <button>Shop Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="description-site">
           <div class="grid-item">
             <h1>
@@ -334,6 +373,12 @@
             </div>
           </div>
         </div>
+        <div class="special-offer">
+          <div>
+            <img src="images/offer-1.jpg" alt="offer-1" />
+          </div>
+          <div><img src="images/offer-2.jpg" alt="offer-2" /></div>
+        </div>
         <div class="feature-product">
           <h1>Recent Products</h1>
           <div class="product-sections">
@@ -372,7 +417,7 @@
       <footer>
         <div class="high-foot">
           <div class="contact-foot-info">
-            <h5>Get In Touch</h5>
+            <h5>GET IN TOUCH</h5>
             <p>
               No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et
               et dolor sed dolor. Rebum tempor no vero est magna amet no
