@@ -103,11 +103,11 @@
   .right-menu .menu:hover ul {
     display: block;
     position: absolute;
-    top: 100%;
-    right: 100%;
+    top: 0;
     left: 100%;
     z-index: 10;
-    background-color: aqua;
+    background-color:var(--page-whiteColor);
+    width: 100%;
   }
 
   /* End Nav Section */

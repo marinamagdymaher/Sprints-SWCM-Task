@@ -68,7 +68,7 @@ ul li a:hover {
 .right-menu ul {
   display: none;
   list-style: none;
-  background-color: aqua;
+  background-color:var(--page-mainColor) ;
 }
 
 .right-menu .menu:hover ul {
@@ -86,6 +86,7 @@ ul li a:hover {
   padding: 10px;
   margin: 3px;
   background-color: var(--page-whiteColor);
+  position: relative;
 }
 
 /* End Top Nav-bar */
