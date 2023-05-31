@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="myDIV" class="header">
+      <h2>My To Do List</h2>
+      <input type="number" id="num-task" placeholder="Number" />
+      <input type="text" id="title-task" placeholder="Priority..." />
+      <span onclick="addElement()" class="addBtn">Add</span>
+    </div>
+    <div class="display_table">
+      <table class="list" id="employeeList">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Number</th>
+            <th>Priority</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="task.js"></script>
+  </body>
+</html>
