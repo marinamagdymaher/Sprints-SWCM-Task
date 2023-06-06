@@ -21,7 +21,7 @@ function createTr(number, title) {
   //Note:- .rows.length = return no of row
 
   emp_td2.innerHTML = `<input class="number_input" type="number" value="${number}" disabled/>`;
-  emp_td3.innerHTML = `<input type="text" value="${title}" disabled/>`;
+  emp_td3.innerHTML = `<input class="priority_input" type="text" value="${title}" disabled/>`;
   emp_td4.innerHTML =
     '<button class="edt" onClick="onEdit(this)">Edit</button>   <button class="dlt" onClick="onDelete(this)">Delete</button>';
   return removeValue();
@@ -54,6 +54,34 @@ function onDelete(e) {
     selectdelete = selectdelete.remove(e);
   }
 }
+
+document
+  .getElementById("saveAllBtn")
+  .addEventListener("click", function saveAll() {
+    const empTable = document.querySelector(".list");
+    for (let i = 0; i < empTable.rows.length; i++) {
+      const row = empTable.rows[i];
+      for (let j = 0; j < row.cells.length; j++) {
+        const cell = row.cells[j];
+        const hasChildren = cell.children.length > 0;
+        if (hasChildren) {
+          if (cell.children[0].className === "number_input") {
+            cell.children[0].disabled = true;
+          } else if (cell.children[0].className === "priority_input") {
+            cell.children[0].disabled = true;
+          } else if (cell.children[0].className === "edt") {
+            cell.children[0].innerHTML = "Edit";
+            cell.children[1].style.display = "inline-block"
+          } 
+        }
+      }
+    }
+
+    // if ((editAll.innerHTML = "Save")) {
+    //   console.log("Save mode")
+    //   // editAll.innerHTML = "Edit";
+    // }
+  });
 
 // function saveAll() {
 //   let savebtn = document.querySelector(".edt");
