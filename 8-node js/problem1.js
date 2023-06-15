@@ -33,9 +33,19 @@ data.catFriends.forEach((item) => {
 const totalWeight = data.catFriends.reduce((acc, current) => {
   return acc + current.weight;
 }, 0);
-console.log("totalWeight"+ ":" + totalWeight);
+console.log("totalWeight" + ":" + totalWeight);
 
 // Print the total activities of all cats (op:6)
+console.log("Total activities of all cats:");
+data.activities.forEach((item) => {
+  console.log(item);
+});
+for (let i = 0; i < data.catFriends.length; i++) {
+  data.catFriends[i].activities.forEach((item) => {
+    console.log(item);
+  });
+}
+
 
 // Add 2 more activities to Bar & Foo cats
 for (let i = 0; i < data.catFriends.length; i++) {
