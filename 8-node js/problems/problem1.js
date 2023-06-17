@@ -1,5 +1,4 @@
 // Read the JSON in problem1.json
-
 const fs = require("fs");
 const file1 = "./problem1.json";
 const data = JSON.parse(
