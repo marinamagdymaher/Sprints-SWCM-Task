@@ -1,4 +1,3 @@
-const tasks = [];
 const addElement = function () {
   const number = document.getElementById("num-task").value;
   const title = document.getElementById("title-task").value;
@@ -9,6 +8,8 @@ const addElement = function () {
     task = createTr(number, title);
   }
 };
+
+const tasks = [];
 function createTr(number, title) {
   const empTable = document.querySelector(".list");
   const emp_tr = empTable.insertRow(empTable.length);
@@ -16,16 +17,30 @@ function createTr(number, title) {
   const emp_td2 = emp_tr.insertCell(1);
   const emp_td3 = emp_tr.insertCell(2);
   const emp_td4 = emp_tr.insertCell(3);
+
   // const totalRowCount = document.querySelector(".list tr").length;
   emp_td1.innerHTML = empTable.rows.length - 1;
+  tasks.push({id: emp_td1.innerHTML, number, title});
+  // console.log(tasks);
   //Note:- .rows.length = return no of row
 
   emp_td2.innerHTML = `<input class="number_input" type="number" value="${number}" disabled/>`;
   emp_td3.innerHTML = `<input class="priority_input" type="text" value="${title}" disabled/>`;
   emp_td4.innerHTML =
     '<button class="edt" onClick="onEdit(this)">Edit</button>   <button class="dlt" onClick="onDelete(this)">Delete</button>';
-  return removeValue();
+  removeValue();
+  sortData();
+  console.log(tasks);
 }
+
+function sortData() {
+  tasks.sort((a, b) => a.number - b.number)
+  const empTable = document.querySelector(".list");
+  const sortTr2 = tasks.number;
+  // empTable.children[1].innerHTML = sortTr2;
+  // sortTr2.innerHTML = createTr(emp_td2);
+}
+
 
 function removeValue() {
   document.getElementById("num-task").value = "";
@@ -71,8 +86,8 @@ document
             cell.children[0].disabled = true;
           } else if (cell.children[0].className === "edt") {
             cell.children[0].innerHTML = "Edit";
-            cell.children[1].style.display = "inline-block"
-          } 
+            cell.children[1].style.display = "inline-block";
+          }
         }
       }
     }
