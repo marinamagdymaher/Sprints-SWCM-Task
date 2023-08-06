@@ -13,10 +13,11 @@ const userSchema = new Schema({
     unique: true,
   },
   password: { type: String, required: true },
+  products: [{ type: mongoose.Schema.Types.ObjectId, ref: "Product" }],
 });
 
 const User = mongoose.model("User", userSchema);
 
 module.exports = User;
 
-// token: { type: String },
+// products: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Product' }]

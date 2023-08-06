@@ -2,7 +2,9 @@ const express = require("express");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require("../schemas/user");
+const Product = require("../schemas/product");
 const { createHash } = require("crypto");
+const { decode } = require("punycode");
 require("dotenv").config();
 
 const hash = (password) =>
@@ -73,7 +75,7 @@ const verifyToken = (req, res, next) => {
     // const token = req.body.token
     const [_, token] = req.headers.authorization?.split(" ");
     const decoded = jwt.verify(token, process.env.TOKEN_KEY);
-    req.user = decoded;
+    req.user = decoded.user;
     next();
   } catch (error) {
     return res
@@ -82,4 +84,25 @@ const verifyToken = (req, res, next) => {
   }
 };
 
-module.exports = { loginModel, registerModel, verifyToken };
+const addProductToUser = async (req, res) => {
+  const { productId } = req.body;
+  // const product = await Product.findById(productId);
+
+  console.log(req.user);
+
+  const product = await Product.findByIdAndUpdate(productId, {
+    $addToSet: { users: req.user },
+  }); 
+
+  const user = await User.findByIdAndUpdate(req.user._id, {
+    $addToSet: { products: product },
+  });
+
+  res.status(200).json({
+    message: "Product added to User Successfully",
+    email: user.email,
+    product: product,
+  });
+};
+
+module.exports = { loginModel, registerModel, verifyToken, addProductToUser };

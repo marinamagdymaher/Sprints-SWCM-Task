@@ -1,4 +1,4 @@
-const { registerModel, loginModel } = require("../models/userModel");
+const { registerModel, loginModel, addProductToUser } = require("../models/userModel");
 
 const registerController = (req, res, next) => {
   try {
@@ -19,4 +19,14 @@ const loginController = (req, res) => {
   }
 };
 
-module.exports = {loginController, registerController};
+const addProductToUserController = (req, res) => {
+  try {
+    addProductToUser(req, res);
+  } catch (error) {
+    return res
+      .status(401)
+      .json({ status: "error", message: "Unauthentication" });
+  }
+};
+
+module.exports = {loginController, registerController, addProductToUserController};

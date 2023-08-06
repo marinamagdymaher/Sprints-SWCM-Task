@@ -9,6 +9,7 @@ router.post("/", async (req, res) => {
   const newProduct = new Product({
     name: body.name || "undefined",
     price: body.price || "undefined",
+    stock:body.stock || "undefined",
     categories: body.categories || "undefined",
   });
   console.log(newProduct);
@@ -25,7 +26,13 @@ router.get("/", async (req, res) => {
   const perPage = parseInt(req.query.perPage || "10");
   const allProduct = await Product.find()
     .skip((page - 1) * perPage)
-    .limit(perPage);
+    .limit(perPage).populate({ 
+      path: 'users',
+      populate: {
+        path: 'products',
+        model: 'Product'
+      } 
+   });
   res.send(allProduct);
 });
 
@@ -45,5 +52,6 @@ router.put("/:id", async (req, res) => {
   });
   res.send(result);
 });
+
 
 module.exports = router;
